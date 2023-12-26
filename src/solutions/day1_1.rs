@@ -1,4 +1,4 @@
-fn main() {
+pub fn main() {
     let contents = utils::read_input("day1.txt");
 
     let mut sum: i32 = 0;

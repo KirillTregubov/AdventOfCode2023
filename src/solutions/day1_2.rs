@@ -1,3 +1,18 @@
+pub fn main() {
+    let contents = utils::read_input("day1.txt");
+
+    let mut sum: i32 = 0;
+
+    for line in contents.lines() {
+        let new_num: i32 = format!("{}{}", find_number(line, true), find_number(line, false))
+            .parse()
+            .expect("Input is malformed");
+        sum += new_num;
+    }
+
+    println!("Solution to Day 1 Part Two: {}", sum);
+}
+
 fn find_number(line: &str, finding_first: bool) -> i32 {
     let mut target_index = if finding_first { line.len() } else { 0 };
     let mut target_number = -1;
@@ -47,19 +62,4 @@ fn find_number(line: &str, finding_first: bool) -> i32 {
         return target_number;
     }
     panic!("Input is malformed");
-}
-
-fn main() {
-    let contents = utils::read_input("day1.txt");
-
-    let mut sum: i32 = 0;
-
-    for line in contents.lines() {
-        let new_num: i32 = format!("{}{}", find_number(line, true), find_number(line, false))
-            .parse()
-            .expect("Input is malformed");
-        sum += new_num;
-    }
-
-    println!("Solution to Day 1 Part Two: {}", sum);
 }
