@@ -1,7 +1,5 @@
-use utils::read_input;
-
 fn main() {
-    let contents = read_input("day1.txt");
+    let contents = utils::read_input("day1.txt");
 
     let mut sum: i32 = 0;
 
