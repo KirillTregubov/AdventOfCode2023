@@ -30,22 +30,26 @@ where
 {
     use std::time::Instant;
 
-    // Record the start time
     let start_time = Instant::now();
 
-    // Call the provided closure
     code_to_profile();
 
-    // Record the end time
     let end_time = Instant::now();
-
-    // Calculate the elapsed time
     let elapsed_time = end_time - start_time;
 
-    // Print the elapsed time in seconds and milliseconds
+    let seconds = elapsed_time.as_secs();
+    let milliseconds = elapsed_time.subsec_millis();
+
+    if seconds > 0 {
+        println!(
+            "Elapsed time: {} seconds, {} milliseconds",
+            seconds, milliseconds
+        );
+        return;
+    }
     println!(
-        "Elapsed time: {} seconds, {} milliseconds",
-        elapsed_time.as_secs(),
-        elapsed_time.subsec_millis()
+        "Elapsed time: {} milliseconds {} microseconds",
+        milliseconds,
+        elapsed_time.subsec_micros() - milliseconds * 1000
     );
 }

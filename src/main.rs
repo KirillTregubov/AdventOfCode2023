@@ -15,13 +15,13 @@ fn main() {
 
     match day.as_str() {
         "1" => match part.as_str() {
-            "1" => solutions::day1_1::main(),
-            "2" => solutions::day1_2::main(),
+            "1" => utils::profile(solutions::day1_1::main),
+            "2" => utils::profile(solutions::day1_2::main),
             _ => panic!("Invalid part: {}", part),
         },
         "2" => match part.as_str() {
-            "1" => solutions::day2_1::main(),
-            "2" => solutions::day2_2::main(), //panic!("Day 2 Part 2 is not implemented yet!"),
+            "1" => utils::profile(solutions::day2_1::main),
+            "2" => utils::profile(solutions::day2_2::main), //panic!("Day 2 Part 2 is not implemented yet!"),
             _ => panic!("Invalid part: {}", part),
         },
         day if (3..=25).contains(&day.parse::<usize>().unwrap_or_default()) => {
