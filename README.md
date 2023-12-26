@@ -5,7 +5,7 @@
 
 ## Preface
 
-All solutions have been tested against the puzzle inputs provided to my account on the Advent of Code website. As per the [About](https://adventofcode.com/2023/about) page, the puzzle text and inputs are not included in this repository.
+This is my first time participating in Advent of Code and my first look at Rust. All solutions have been tested against the puzzle inputs provided to my account on the Advent of Code website. As per the [About](https://adventofcode.com/2023/about) page, the puzzle text and inputs are not included in this repository.
 
 ## Prerequisites
 
