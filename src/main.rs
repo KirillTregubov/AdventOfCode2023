@@ -21,7 +21,7 @@ fn main() {
         },
         "2" => match part.as_str() {
             "1" => solutions::day2_1::main(),
-            "2" => panic!("Day 2 Part 2 is not implemented yet!"),
+            "2" => solutions::day2_2::main(), //panic!("Day 2 Part 2 is not implemented yet!"),
             _ => panic!("Invalid part: {}", part),
         },
         day if (3..=25).contains(&day.parse::<usize>().unwrap_or_default()) => {
