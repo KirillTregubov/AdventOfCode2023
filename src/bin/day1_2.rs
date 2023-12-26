@@ -23,5 +23,5 @@ fn main() {
         sum += new_num;
     }
 
-    println!("Solution to Day 1 Part One: {}", sum);
+    println!("Solution to Day 1 Part Two: {}", sum);
 }
