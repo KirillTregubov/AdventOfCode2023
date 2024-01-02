@@ -21,7 +21,12 @@ fn main() {
         },
         "2" => match part.as_str() {
             "1" => utils::profile(solutions::day2_1::main),
-            "2" => utils::profile(solutions::day2_2::main), //panic!("Day 2 Part 2 is not implemented yet!"),
+            "2" => utils::profile(solutions::day2_2::main),
+            _ => panic!("Invalid part: {}", part),
+        },
+        "3" => match part.as_str() {
+            "1" => utils::profile(solutions::day3_1::main),
+            "2" => panic!("Day 3 Part 2 is not implemented yet!"),
             _ => panic!("Invalid part: {}", part),
         },
         day if (3..=25).contains(&day.parse::<usize>().unwrap_or_default()) => {
